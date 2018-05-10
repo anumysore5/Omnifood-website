@@ -1,0 +1,78 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    .row,    
+    .main-bckgrdimage-textbox { width: 90%; }
+    
+    .main-bckgrdimage-textbox h1 { font-size: 200%; }
+    
+    .main-nav { font-size: 80%; }
+    
+    .button:link,
+    .button:visited { font-size: 80%; }
+    
+    h2 { font-size: 150%; }
+    
+    header img { padding: 10px; }
+    
+    .omnifood-intro {
+        margin: 0; 
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    .features-icon { font-size: 200%; }
+    
+    h3 { 
+        font-size: 85%; 
+        word-spacing: 2px; 
+    }
+    
+    .features { padding-right: 10px; }
+    
+    .features p { font-size: 80%; }
+    
+    .how-it-works-steps { margin-bottom: 30px; }
+
+    .how-it-works-steps:last-of-type {
+        margin-bottom: 60px;
+    }
+
+    .how-it-works-steps div {      
+        border: 1px solid #de2511;
+        width: 40px;
+        height: 40px;
+        padding: 2px 5px 8px 5px;
+        font-size: 130%
+    }
+    
+    .how-it-works-steps p { font-size: 90%; }
+    
+    .steps-box:last-child { margin-top: 40px; }
+    
+    .city-details { font-size: 80%; }
+    
+    .details-icon { margin-right: 4px; }
+    
+    blockquote { margin-top: 40px; }
+
+    blockquote:before { font-size: 200%; }
+
+    cite { font-size: 80%; }
+
+    cite img{ height: 40px; }
+}
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    
+}

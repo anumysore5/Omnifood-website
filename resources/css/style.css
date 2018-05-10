@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px; /* base font size for all the elements in the html */
+    text-rendering: optimizeLegibility;
+}
+
+/*************************************/
+/* Reusable components               */
+/*************************************/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.features {
+    padding: 2px;
+}
+
+a:link,
+a:visited {
+    color: #de2511;
+    text-decoration: none;
+    border-bottom: 1px solid #de2511;
+    padding-bottom: 1px;
+}
+
+a:hover,
+a:active {
+    color: #555555;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/appetizer-breakfast-cuisine-326278.jpg); /* linear-gradient is used to create a layer over the background image so that it acts like a filter to control the image transparency */
+    
+    background-size: cover; /* to see the entire image */
+    background-position: center; /* to put the background image in the center */
+    height: 100vh; /* means 100% of the viewport */
+    background-attachment: fixed;
+}
+
+.main-bckgrdimage-textbox {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*************************************/
+/* Headings                          */
+/*************************************/
+
+/* h1 element has some default margins at the top and bottom. To get rid of that, set the margin to 0 */
+h1, h2, h3 { 
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 250%; /* 250% of the base font size i.e. the one defined for the entire html */
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 170%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    padding-bottom: 30px;
+}
+
+/* psuedo class */
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #de2511;
+    content: " ";
+    width: 150px;
+    margin: 30px auto 0 auto;
+}
+
+/*************************************/
+/* Paragraphs                        */
+/*************************************/
+
+.omnifood-intro {
+    line-height: 150%;
+    width: 80%; /* This refers to 80% of our base html width */
+    margin-left: 10%; /*remaining 20% of the width is split equally between the left and right margins */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.features p {
+    font-size: 90%;
+    line-height: 150%;
+    text-align: left;
+}
+
+/*************************************/
+/* feature icons                     */
+/*************************************/
+
+.features-icon {
+    font-size: 300%;
+    display: block; /* this forces a line break */
+    color: #de2511;  
+    margin-bottom: 10px;
+}
+
+.details-icon {
+    color: #de2511;
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+/*************************************/
+/* Buttons                           */
+/*************************************/
+.button:link,
+.button:visited,
+input[type=submit] {
+    display: inline-block;
+    font-weight: 300;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
+}
+
+.button-solid:link,
+.button-solid:visited,
+input[type=submit] {
+    background-color: #de2511;
+    border: 1px solid #de2511;
+    color: white;
+    margin-right: 20px;
+}
+
+.button-solid:hover,
+.button-solid:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: rgba(174, 29, 14, 0);
+    color: #de2511;
+}
+
+.button-transparent:link,
+.button-transparent:visited {
+    border: 1px solid #de2511;
+    color: #de2511;
+}
+
+.button-transparent:hover,
+.button-transparent:active {
+    background-color: #de2511;
+    color: white;
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+    float: left;
+    padding-top: 15px;
+}
+
+.main-nav {
+    float: right;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 90%;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+    padding: 8px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #de2511;
+    margin-top: 50px;
+}
+
+/*************************************/
+/* Food Images                       */
+/*************************************/
+
+.favourite-meals {
+    padding: 0;
+}
+
+.food-images {
+    list-style: none;
+    width: 100%;
+}
+
+.food-images li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;    
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.meal-photo img {
+    width: 100%; /* ensures that the element is exactly as wide as it's container */
+    height: auto;
+    transform: scale(1.15); /* scales the image to 115% of it's original size */
+    opacity: 0.5;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.meal-photo img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/*************************************/
+/* How it works                      */
+/*************************************/
+
+.how-it-works {
+    background-color: #f0f0f0;    
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.how-it-works-steps {
+    margin-bottom: 50px;
+}
+
+.how-it-works-steps:last-of-type {
+    margin-bottom: 80px;
+}
+
+.how-it-works-steps div {
+    color: #de2511;
+    border: 2px solid #de2511;
+    display: inline-block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    float: left;
+    margin-right: 25px;
+}
+
+.button-app:link,
+.button-app:visited {
+    border: 0;
+}
+
+.button-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.how-it-works-steps p {
+    line-height: 120%;
+    text-align: left;
+}
+
+/*************************************/
+/* we're located in these cities     */
+/*************************************/
+
+.city-details {
+    font-size: 90%;
+    line-height: 150%;
+    text-align: left;
+}
+
+.cities img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/*************************************/
+/* Customer testimonials             */
+/*************************************/
+
+.customer-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/blur-blurred-background-breakfast-693267.jpg);
+    background-size: cover; /* to see the entire image */
+    background-position: center; /* to put the background image in the center */
+    height: 100vh; /* means 100% of the viewport */  
+    color: #fff;
+    background-attachment: fixed; /* ensures that the image does not move when scrolled - Gives a very cool effect */
+}
+
+blockquote {
+    padding: 2px;
+    font-style: italic;
+    line-height: 150%;
+    position: relative;
+    margin-top: 50px;
+}
+
+blockquote:before {
+    content:"\201C"; 
+    font-size: 400%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img{
+    height: 50px;
+    border-radius: 70%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/*************************************/
+/* Pricing Plans                     */
+/*************************************/
+
+.pricing-plans {
+    background-color: #f0f0f0;
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #de2511;
+}
+
+.plan-price span {
+    font-size: 50%;
+    font-weight: 300;
+}
+
+.plan-price-per-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+/* ----------------------------------------------- */
+/* FORM */
+/* ----------------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #a2a2a2;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
